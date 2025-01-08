@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
+        
         /*hello32();
         int bongus = 65;
         coolers(bongus);*/
@@ -9,8 +12,9 @@ public class App {
         System.out.println(quattro);*/
         /*double cinco = RightTriangleArea(uno, dos);
         System.out.println(cinco);*/
-        double siete = CircleArea(dos);
-        System.out.println(siete);
+        /*double siete = CircleArea(dos);
+        System.out.println(siete);*/
+        System.out.println(GetNumberInput());
     }
 
     public static void hello32(){
@@ -36,5 +40,22 @@ public class App {
     public static double CircleArea(double dos){
         double ocho = dos*dos*Math.PI;
         return ocho;
+    }
+
+    public static int GetNumberInput(){
+        Scanner tb = new Scanner(System.in);
+        boolean beans = true;
+        int feeeeem = 0;
+        while (beans) {
+            try {
+                System.out.println("Skriv ett tal");
+                feeeeem = tb.nextInt();
+                beans = false;
+            } catch (Exception e) {
+                System.out.println("foonka inte");
+                tb.next();
+            }
+        }
+        return feeeeem;
     }
 }
