@@ -5,8 +5,10 @@ public class App {
         coolers(bongus);*/
         double uno = 4.3;
         double dos = 5.7;
-        double quattro = multi(uno, dos);
-        System.out.println(quattro);
+        /*double quattro = multi(uno, dos);
+        System.out.println(quattro);*/
+        double cinco = RightTriangleArea(uno, dos);
+        System.out.println(cinco);
     }
 
     public static void hello32(){
@@ -22,5 +24,10 @@ public class App {
     public static double multi(double uno, double dos){
         double tres = uno*dos;
         return tres;
+    }
+
+    public static double RightTriangleArea(double uno, double dos){
+        double seis = uno*uno+dos*dos;
+        return Math.sqrt(seis);
     }
 }
