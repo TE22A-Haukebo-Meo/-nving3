@@ -13,8 +13,12 @@ public class App {
         /*double cinco = RightTriangleArea(uno, dos);
         System.out.println(cinco);*/
         /*double siete = CircleArea(dos);
-        System.out.println(siete);*/
-        System.out.println(GetNumberInput());
+        System.out.println(siete);
+        System.out.println(GetNumberInput());*/
+        String skibidi = "skibidi";
+        String sigma = "sigma";
+        String rizz = "rizz";
+        GetChoice(skibidi, sigma, rizz);
     }
 
     public static void hello32(){
@@ -57,5 +61,29 @@ public class App {
             }
         }
         return feeeeem;
+    }
+
+    public static int GetChoice(String skibidi, String sigma, String rizz){
+        Scanner tb = new Scanner(System.in);
+        System.out.println("1. "+skibidi);
+        System.out.println("2. "+sigma);
+        System.out.println("3. "+rizz);
+        int choice = 0;
+        boolean cool = true;
+        while (cool) {
+            try {
+                System.out.println("Välj ett av orden");
+                choice = tb.nextInt();
+                while (choice>3 || choice<1) {
+                    System.out.println("Snela tal mellan 1-3");
+                    choice = tb.nextInt();
+                }
+                cool = false;
+            } catch (Exception e) {
+                System.out.println("foonka inte");
+                tb.next();
+            }
+        }
+        return choice;
     }
 }
